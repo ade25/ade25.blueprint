@@ -1,10 +1,8 @@
 from fabric.api import task
 from fabric.api import cd
 from fabric.api import env
-from fabric.api import local
 from fabric.api import run
-from fabric.api import sudo
-from fabric.api import task
+from fabric.api import execute
 
 from ade25.fabfiles import server
 from ade25.fabfiles import project
@@ -18,18 +16,13 @@ env.user = 'root'
 env.hosts = ['6zu4']
 env.webserver = '/opt/webserver/buildout.webserver'
 env.code_root = '/opt/sites/plonesite/buildout.plonesite'
-env.local_root = '/Users/cb/dev/ade25/ade25.blueprint'
+env.local_root = '/Users/sd/server/ade25/ade25.blueprint'
 env.sitename = 'plonesite'
 env.code_user = 'root'
 env.prod_user = 'www'
 
 
-def ls():
-    """ Low level configuration test """
-    with cd(env.code_root):
-        run('ls')
-
-
+@task
 def supervisorctl(*cmd):
     """Runs an arbitrary supervisorctl command."""
     with cd(env.webserver):
@@ -38,8 +31,8 @@ def supervisorctl(*cmd):
 
 def deploy():
     """ Deploy current master to production server """
-    project.site.update()
-    project.site.estart()
+    execute(project.site.update())
+    execute(project.site.restart())
 
 
 def deploy_full():
