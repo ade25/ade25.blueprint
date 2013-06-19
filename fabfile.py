@@ -24,24 +24,14 @@ env.code_user = 'root'
 env.prod_user = 'www'
 
 
-def ls():
-    """ Low level configuration test """
-    with cd(env.code_root):
-        run('ls')
-
-
-def supervisorctl(*cmd):
-    """Runs an arbitrary supervisorctl command."""
-    with cd(env.webserver):
-        run('bin/supervisorctl ' + ' '.join(cmd))
-
-
+@task
 def deploy():
     """ Deploy current master to production server """
     project.site.update()
-    project.site.estart()
+    project.site.restart()
 
 
+@task
 def deploy_full():
     """ Deploy current master to production and run buildout """
     project.site.update()
@@ -49,8 +39,15 @@ def deploy_full():
     project.site.restart()
 
 
+@task
 def rebuild():
     """ Deploy current master and run full buildout """
     project.site.update()
     project.site.build_full()
     project.site.restart()
+
+
+@task
+def get_data():
+    """ Copy live database for local development """
+    project.db.download_data()
