@@ -27,6 +27,8 @@ setup(name='example.sitetheme',
           'setuptools',
           'plone.app.theming',
           'plone.app.themingplugins',
+          'plone.app.toolbar',
+          'plone.app.widgets',
           # -*- Extra requirements: -*-
       ],
       entry_points="""
