@@ -4145,6 +4145,26 @@ td.visible-print {
   font-family: 'redactedregular';
   color: #555555;
 }
+.hiddenStructure {
+  display: block;
+  background: transparent;
+  background-image: none;
+  /* safari bug */
+
+  border: none;
+  height: 0.1em;
+  overflow: hidden;
+  padding: 0;
+  margin: -0.1em 0 0 -0.1em;
+  width: 1px;
+}
+ul.visualNoMarker {
+  list-style: none;
+  margin-left: 0;
+}
+.visualClear {
+  clear: both;
+}
 .avatar {
   margin-right: 2px;
   line-height: 22px;
