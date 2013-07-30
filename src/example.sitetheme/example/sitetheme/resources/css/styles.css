@@ -5213,14 +5213,17 @@ dd.image-caption {
   color: #666;
   font-size: 85%;
 }
+.text-discreet,
 .discreet {
-  color: #666;
+  color: #999999;
   font-size: 14px;
   font-weight: 1;
 }
+.text-highlight,
 .visualHighlight {
-  background-color: #c09853;
+  background-color: #fcf8e3;
 }
+.text-pullquote,
 .pullquote {
   line-height: 22px;
   float: right;
@@ -5233,6 +5236,7 @@ dd.image-caption {
   border-left: 5px solid #999999;
   background: #eeeeee;
 }
+.text-callout,
 .callout {
   background: #eeeeee;
   padding: 22px;
