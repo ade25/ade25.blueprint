@@ -1,15 +1,20 @@
 {
-  "name": "a25-diazo-blueprint",
+  "name": "example",
   "version": "1.0.0",
-  "description": "Ade25 diazo blueprint",
   "dependencies": {
     "requirejs": "2.1.8",
     "jquery": "1.8.3",
+    "modernizr": "~2.6.2",
     "underscore": "1.4.4",
     "backbone": "1.0.0",
     "bootstrap": "git@github.com:twbs/bootstrap.git",
-    "font-awesome": "3.2.1",
-    "pat-cms-bbb": "git@github.com:ade25/pat-cms-bbb.git"
+    "font-awesome": "4.0.3",
+    "respond": "~1.3.0",
+    "html5shiv": "~3.6.2",
+    "holderjs": "~2.1.0",
+    "animate.css": "~3.0.0",
+    "diazo-plone": "git@github.com:ade25/diazo-plone.git",
+    "jquery-pjax": "~1.7.3"
   },
   "devDependencies": {
     "chai": "1.7.2"
