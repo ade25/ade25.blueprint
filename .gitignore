@@ -29,8 +29,6 @@ src/plone.app.contenttypes
 src/plone.app.tiles
 src/plone.tiles
 src/ade25.*
-src/vwc.tiles
-src/vwc.toolbar
-src/vwc.typekit
+src/vwc.*
 src/sauna.reload
 src/watchdog
