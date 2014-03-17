@@ -1,43 +1,44 @@
-// Custom application specific styles
-//--------------------------------------
+//
+// Application stylesheet
+// -----------------------------------------------
 
-body > header {
-    margin-bottom: @line-height-computed;
-    #toolbar + nav {
-        margin-top: @navbar-height;
+.app-toolbar + .app-navbar {
+    margin-top: @navbar-height;
+}
+
+.app-header {
+    .jumbotron();
+    display: none;
+}
+
+.app-sign {
+    display: inline-block;
+    .square(@navbar-height);
+    padding: ceil(@line-height-computed / 2);
+    border: ceil(@line-height-computed / 4) solid @gray-lighter;
+    border-radius: floor(@navbar-height / 2);
+    color: @gray-lighter;
+    font-size:f loor(@navbar-height / 2);
+    text-align: center;
+    line-height: 1;
+    &.app-sign-large {
+        .square((@navbar-height * 2));
+        padding: @line-height-computed;
+        border-radius: @navbar-height;
+        font-size: @navbar-height;
     }
-}
-
-// Some eample styles for portlets
-
-.portlet {
-  .portletHeader {
-    font-size: @font-size-base * 1.5;
-    padding: @line-height-computed / 2;
-    border-bottom: 1px solid @gray-light;
-  }
-  .portletItem {
-    padding: @padding-large-vertical;
-  }
-  .portletFooter {
-    padding: @padding-large-vertical;
-    font-size: @font-size-small;
-  }
-}
-
-// Example styles for listings (e.g. folder summary view)
-
-.tileItem {
-  .media();
-  .tileHeadline {
-    .media-heading();
-  }
-}
-
-
-// Example styles for a HMTL5 based site footer
-body > footer {
-    margin-top: @line-height-computed;
-    padding: @line-height-computed 0;
-    border-top: 1px solid @gray-lighter;
+    &.app-sign-draggable {
+        border: none;
+    }
+    .icon-bar {
+        display: block;
+        width: 22px;
+        height: 2px;
+        border-radius: 1px;
+        border-color: @gray-dark;
+        background-color: @navbar-default-toggle-icon-bar-bg;
+    }
+    .icon-bar + .icon-bar {
+        margin-top: 4px;
+    }
 }
