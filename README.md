@@ -2,9 +2,9 @@
 
 ## Deprecated August 2014
 
-* Since we are already working on a new blueprint that will be much more flexible (and allow for pyramid projects as well for example) this buildout is no longer actively supported and considered as deprecated*
+### Since we are already working on a new blueprint that will be much more flexible (and allow for pyramid projects as well for example) this buildout is no longer actively supported and considered as deprecated
 
-* Note: this blueprint might no longer be working as is and required manual updates and changes to the codebase. The example sitetheme package ist still valid, but the contained 'resource' directory should be replaced by a yeoman based theme setup*
+### Note: this blueprint might no longer be working _as is_ and requires manual updates and changes to the codebase. The example sitetheme package ist still valid, but the contained 'resource' directory should be replaced by a yeoman based theme setup
 
 This is a blueprint buildout to kickstart new Plone CMS projects.
 
